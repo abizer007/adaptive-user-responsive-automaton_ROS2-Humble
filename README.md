@@ -21,7 +21,7 @@
 - [Run / Demo Flow (Phases 1–4)](#run--demo-flow-phases-1-4)  
 - [Service & Action API](#service--action-api)  
 - [How to Use — Examples](#how-to-use---examples)  
-- [Video Demo & Screenshots](#video-demo--screenshots)  
+- [Video Demo & Screenshots](##-🎥- Project-Demo)  
 - [Troubleshooting](#troubleshooting)  
 - [Contributing](#contributing)  
 - [License](#license)  
@@ -250,9 +250,6 @@ ros2 topic echo /panda_command
 
 ---
 
-## Video Demo & Screenshots
-
-- Demo video: 
 ## 🎥 Project Demo
 Click to view video
 
