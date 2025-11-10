@@ -253,6 +253,9 @@ ros2 topic echo /panda_command
 ## Video Demo & Screenshots
 
 - Demo video: 
+## 🎥 Project Demo
+
+[▶️ Watch the Demo Video]()
 
 ---
 
