@@ -254,10 +254,10 @@ ros2 topic echo /panda_command
 
 - Demo video: 
 ## 🎥 Project Demo
+Click to view video
 
-## 🎥 Project Demo
+[![AURA Demo Preview](Screenshot%202025-11-09%20174402.png)](E034_MDRIA%20Project%20%281%29.mp4)
 
-[![AURA Demo Preview](demo/preview.png)](E034_MDRIA%20Project%20%281%29.mp4)
 
 ---
 
