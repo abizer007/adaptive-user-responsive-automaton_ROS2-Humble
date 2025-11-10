@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+import sys, termios, tty
+
+class KeyboardControl(Node):
+    def __init__(self):
+        super().__init__('panda_keyboard_control')
+        self.pub = self.create_publisher(String, 'panda_command', 10)
+        self.get_logger().info("Keyboard control started (press h=Home, p=Pick, d=Drop, q=Quit)")
+
+    def get_key(self):
+        fd = sys.stdin.fileno()
+        old = termios.tcgetattr(fd)
+        try:
+            tty.setraw(sys.stdin.fileno())
+            ch = sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(fd, termios.TCSADRAIN, old)
+        return ch
+
+    def run(self):
+        while rclpy.ok():
+            key = self.get_key()
+            msg = String()
+
+            if key == 'h':
+                msg.data = 'home'
+            elif key == 'p':
+                msg.data = 'pick'
+            elif key == 'd':
+                msg.data = 'drop'
+            elif key == 'q':
+                self.get_logger().info("Exiting control node.")
+                break
+            else:
+                continue
+
+            self.pub.publish(msg)
+            self.get_logger().info(f"Sent command: {msg.data}")
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = KeyboardControl()
+    node.run()
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

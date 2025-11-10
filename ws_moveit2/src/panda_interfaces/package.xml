@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>panda_interfaces</name>
+  <version>0.0.0</version>
+  <description>ROS interfaces for panda_keyboard_control</description>
+  <maintainer email="you@example.com">you</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- rosidl generation -->
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- common message deps -->
+  <build_depend>std_msgs</build_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <build_depend>builtin_interfaces</build_depend>
+  <exec_depend>builtin_interfaces</exec_depend>
+  <build_depend>action_msgs</build_depend>
+  <exec_depend>action_msgs</exec_depend>
+
+  <!-- This is required for rosidl generation -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+  </export>
+</package>
