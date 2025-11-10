@@ -21,7 +21,7 @@
 - [Run / Demo Flow (Phases 1–4)](#run--demo-flow-phases-1-4)  
 - [Service & Action API](#service--action-api)  
 - [How to Use — Examples](#how-to-use---examples)  
-- [Video Demo & Screenshots](##-🎥- Project-Demo)  
+- [Video Demo & Screenshots](#-🎥-project-demo)  
 - [Troubleshooting](#troubleshooting)  
 - [Contributing](#contributing)  
 - [License](#license)  
